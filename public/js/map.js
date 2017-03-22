@@ -1,5 +1,11 @@
 var drawMarker;
 var markArr = [];
+var currentMap;
+var setMapOnAll = function(map) {
+  for (var i = 0; i < markArr.length; i++) {
+    markArr[i].setMap(map)
+  }
+}
 
 $(function initializeMap (){
 
@@ -36,7 +42,7 @@ $(function initializeMap (){
 
   var mapCanvas = document.getElementById('map-canvas');
 
-  var currentMap = new google.maps.Map(mapCanvas, {
+  currentMap = new google.maps.Map(mapCanvas, {
     center: fullstackAcademy,
     zoom: 13,
     mapTypeId: google.maps.MapTypeId.ROADMAP,

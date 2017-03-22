@@ -140,3 +140,7 @@ h3 {
     vertical-align: middle; }
   #day-title > .remove {
     margin-left: 1em; }
+
+#daySel {
+  background-color: #a8c9dd;
+  color: #736357; }
